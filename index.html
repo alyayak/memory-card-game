@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card - Brain Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- OPENING SCREEN -->
+    <section id="home-screen" class="screen active">
+
+        <div class="home-content">
+
+            <div class="logo">🧠</div>
+
+            <h1>MEMORY CARD</h1>
+
+            <h2>Brain Challenge</h2>
+
+            <p>Test Your Memory and Find All Matching Cards!</p>
+
+            <div class="decoration">
+                🃏 🍎 🍌 🍇 🃏
+            </div>
+
+            <button onclick="startGame()">▶ PLAY NOW</button>
+
+            <button class="secondary" onclick="showInstructions()">
+                HOW TO PLAY
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INSTRUCTION SCREEN -->
+    <section id="instruction-screen" class="screen">
+
+        <div class="menu-box">
+
+            <h1>📖 HOW TO PLAY</h1>
+
+            <div class="instructions">
+
+                <p>🎯 Temukan semua pasangan kartu yang sama.</p>
+
+                <p>🃏 Klik kartu untuk membuka gambar.</p>
+
+                <p>🔍 Ingat posisi gambar yang sudah dibuka.</p>
+
+                <p>⭐ Setiap pasangan benar mendapatkan 100 poin.</p>
+
+                <p>🏆 Selesaikan permainan untuk memenangkan game.</p>
+
+            </div>
+
+            <button onclick="startGame()">LET'S PLAY!</button>
+
+            <button class="secondary" onclick="showHome()">
+                BACK TO MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAME SCREEN -->
+    <section id="game-screen" class="screen">
+
+        <div class="game-container">
+
+            <h1>🧠 MEMORY CARD</h1>
+
+            <p class="subtitle">Find the Matching Pairs!</p>
+
+            <div class="info">
+
+                <div class="info-box">
+                    <span>⏱️ TIME</span>
+                    <h2 id="timer">00:00</h2>
+                </div>
+
+                <div class="info-box">
+                    <span>👣 MOVES</span>
+                    <h2 id="moves">0</h2>
+                </div>
+
+                <div class="info-box">
+                    <span>⭐ SCORE</span>
+                    <h2 id="score">0</h2>
+                </div>
+
+            </div>
+
+            <div id="game-board" class="game-board"></div>
+
+            <p id="message">Find all matching cards!</p>
+
+            <button class="secondary" onclick="showHome()">
+                🏠 MAIN MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLOSING / WIN SCREEN -->
+    <section id="win-screen" class="screen">
+
+        <div class="win-content">
+
+            <div class="trophy">🏆</div>
+
+            <h1>CONGRATULATIONS!</h1>
+
+            <h2>You Win!</h2>
+
+            <p>You have successfully matched all cards!</p>
+
+            <div class="result-box">
+
+                <div>
+                    <span>⭐ FINAL SCORE</span>
+                    <h2 id="final-score">0</h2>
+                </div>
+
+                <div>
+                    <span>👣 TOTAL MOVES</span>
+                    <h2 id="final-moves">0</h2>
+                </div>
+
+                <div>
+                    <span>⏱️ TOTAL TIME</span>
+                    <h2 id="final-time">00:00</h2>
+                </div>
+
+            </div>
+
+            <button onclick="startGame()">🔄 PLAY AGAIN</button>
+
+            <button class="secondary" onclick="showHome()">
+                🏠 MAIN MENU
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
